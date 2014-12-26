@@ -10,11 +10,11 @@ module.exports = function(grunt) {
 
     // Configurable paths
     var appConfig = {
-        app: require('./bower.json').appPath || 'SourceCode',
+        app: 'SourceCode',
         dist: 'FinishCode',
         devcode: 'DevCode',
         bower: 'bower_components',
-        custom: 'SourceCode/grunt'
+        gruntfile: 'SourceCode/grunt'
     };
 
     grunt.initConfig({
@@ -88,7 +88,7 @@ module.exports = function(grunt) {
         // app -> dest 이동
         csscomb: {
             options: {
-                config: '<%= config.custom %>/.csscomb.json'
+                config: '<%= config.gruntfile %>/.csscomb.json'
             },
             dist: {
                 expand: true,
@@ -101,7 +101,7 @@ module.exports = function(grunt) {
         csslint: {
             docs: {
                 options: {
-                    csslintrc: '<%= config.custom %>/.csslintrc'
+                    csslintrc: '<%= config.gruntfile %>/.csslintrc'
                 },
                 src: '<%= config.dist %>/css/style.css'
             }
@@ -123,7 +123,7 @@ module.exports = function(grunt) {
 
         jshint: {
             options: {
-                jshintrc: '<%= config.custom %>/.jshintrc'
+                jshintrc: '<%= config.gruntfile %>/.jshintrc'
             },
             grunt: {
                 src: ['Gruntfile.js']

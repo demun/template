@@ -5,4 +5,4 @@
 
 템플릿을 구성하기 위한 일련의 작업을 간단이 하기위한 작업입니다.
 
-자세한 내용은 [http://demun.tistory.com/](http://demun.tistory.com/) 을 참고하세요.
+자세한 내용은 [http://demun.tistory.com/2445](http://demun.tistory.com/2445) 을 참고하세요.
