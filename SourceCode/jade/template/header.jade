@@ -1,0 +1,57 @@
+//- 안내문구
+
+//if lt IE 7
+p.browsehappy
+	| 당신은 
+	strong 오래된 브라우져
+	| 를 사용하고 있습니다. 환경개선을 위해 
+	a( href='http://browsehappy.com/' ) 브라우져를 업그레이드
+	| 하시기 바랍니다.
+
+
+//- 바로가기 링크(#content 사용)
+a.sr-only.sr-only-focusable( href='#content' ) 본문 바로가기
+
+
+
+//- link 와 title 믹스인 설정
+//- 2번째는 자식이 있는것을 설정
+
+
+mixin navMenu(menu_items)
+	ul.navMenu
+		each top_item in menu_items
+			li
+				+navLinks(top_item)
+				if top_item.child
+					ul
+						each child_item in top_item.child
+							li
+								+navLinks(child_item)
+
+
+//- 자식 link 요소 
+mixin navLinks(item)
+	- var linkAtts = { 'href': item.link }
+	a()&attributes(linkAtts)= item.title
+
+
+
+
+
+div.header
+	+navMenu([
+		{ 'title': 'one', 'link': 'one.html' },
+		{ 'title': 'two', 'link': 'two.html', 
+			child: [
+				{ 'title': 'child one', 'link': 'childOne.html' },
+				{ 'title': 'child two', 'link': 'childtwo.html' },
+				{ 'title': 'child three', 'link': 'childthree.html' }
+			] 
+		},
+		{ 'title': 'three', 'link': 'three.html' },
+		{ 'title': 'four', 'link': 'four.html' }
+	])
+
+
+

@@ -1,0 +1,17 @@
+extends ../../template/layout.jade
+
+//- 문서제목 앞에 현제 제목 추가
+block prepend title
+	| 서브제목2... 
+
+//- 문서제목뒤에 현제 제목 추가
+block append title
+	| ...서브제목2  
+
+
+block main
+	div.main
+		div.wrapper
+			include ../../files/collapse.html
+			include ../../files/bootstrap.jade
+
