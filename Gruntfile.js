@@ -121,11 +121,9 @@ module.exports = function(grunt) {
             }
         },
 
-        // http://blog.outsider.ne.kr/1007
         jshint: {
             options: {
-                jshintrc: '<%= config.custom %>/.jshintrc',
-                reporter: require('jshint-stylish')
+                jshintrc: '<%= config.custom %>/.jshintrc'
             },
             grunt: {
                 src: ['Gruntfile.js']
@@ -415,21 +413,11 @@ module.exports = function(grunt) {
         ]
     );
 
-    // javascript 통합
+    // javascript 
     grunt.registerTask('js-dev', [
             'newer:jshint',
             'concat',
             'uglify'
-        ]
-    );
-
-    // copy
-    grunt.registerTask('copy-dev', [
-            'copy:jquery',
-            'copy:bxSlider',
-            'copy:jqueryui',
-            'copy:magnific',
-            'copy:bootstrap'
         ]
     );
 
