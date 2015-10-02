@@ -16,6 +16,6 @@
     "jquery": "1.9.1"
   },
   "devDependencies": {
-    "bootstrap": "latest"
+    "bootstrap": "3.3.5"
   }
 }
