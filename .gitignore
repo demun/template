@@ -10,8 +10,8 @@ node_modules
 dist
 dev
 
-# 작업저장 폴더 제요ㅣ
-FinishCode
+# 작업저장 폴더제외
+# FinishCode
 
 
 # Ignore docs files

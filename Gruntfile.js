@@ -260,10 +260,6 @@ module.exports = function(grunt) {
 
 
         imagemin: {
-            options: {
-                title: '빌드완료',  // optional
-                message: '<%= pkg.name %> 구축을 성공적으로 완료.' //required
-            },
             dist: {
                 files: [{
                     expand: true,
@@ -303,12 +299,12 @@ module.exports = function(grunt) {
                         src: '<%= config.bower %>/jquery/jquery.min.js',
                         dest: '<%= config.dist %>/js/lib/jquery.min.js'
                     },
-                    // // jquery ui
-                    // {
-                    //     nonull: true,
-                    //     src: '<%= config.bower %>/jquery-ui/jquery-ui.min.js',
-                    //     dest: '<%= config.dist %>/plugins/jquery-ui/jquery-ui.min.js'
-                    // },
+                    // jquery ui
+                    {
+                        nonull: true,
+                        src: '<%= config.bower %>/jquery-ui/jquery-ui.min.js',
+                        dest: '<%= config.dist %>/plugins/jquery-ui/jquery-ui.min.js'
+                    },
                     // // bxSlider
                     // {
                     //     expand: true,
