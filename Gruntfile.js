@@ -9,9 +9,9 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     var config = {
-        src: 'SourceCode',
-        dest: 'FinishCode',
-        bower: 'bower_components'
+        src: 'SourceCode',          // 소스파일이 있는 폴더
+        dest: 'FinishCode',         // 빌드후 완료파일이 있는 폴더
+        bower: 'bower_components'   // bower 플러그인이 설치되는 폴더
     };
 
     grunt.initConfig({
